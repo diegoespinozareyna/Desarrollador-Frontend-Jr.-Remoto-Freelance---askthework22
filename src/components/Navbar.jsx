@@ -6,6 +6,7 @@ import { FaRegUser } from "react-icons/fa";
 import { HiMenuAlt1, HiMenuAlt3, } from "react-icons/hi";
 import ResponsiveMenu from './ResponsiveMenu';
 import { UpdateFollower } from 'react-mouse-follower';
+import { configCursor } from '../Utils/configCursor';
 
 
 export const NavbarMenu = [
@@ -54,47 +55,35 @@ const Navbar = () => {
             {NavbarMenu.map((item, index) => (
               <li key={index}>
                 <UpdateFollower
-                mouseOptions={{
-                  backgroundColor: "white",
-                  zIndex: 9999,
-                  followSpeed: 1.5,
-                  scale:5,
-                  mixBlendMode: "difference"
-                }}
+                  mouseOptions={{
+                    ...configCursor,
+                  }}
                 >
-                <Link to={item.link} className='inline-block text-base font-semibold py-2 px-3 uppercase'>
-                  {item.title}
-                </Link>
+                  <Link to={item.link} className='inline-block text-base font-semibold py-2 px-3 uppercase'>
+                    {item.title}
+                  </Link>
                 </UpdateFollower>
               </li>
             ))}
-            <UpdateFollower 
-             mouseOptions={{
-              backgroundColor: "white",
-              zIndex: 9999,
-              followSpeed: 1.5,
-              scale:5,
-              mixBlendMode: "difference"
-            }}
+            <UpdateFollower
+              mouseOptions={{
+                ...configCursor,
+              }}
             >
-            <Link to='/cart'>
-              <button className='text-xl ps-14'>
-                <ShoppingCart />
-              </button>
-            </Link>
+              <Link to='/cart'>
+                <button className='text-xl ps-14'>
+                  <ShoppingCart />
+                </button>
+              </Link>
             </UpdateFollower>
             <UpdateFollower
-             mouseOptions={{
-              backgroundColor: "white",
-              zIndex: 9999,
-              followSpeed: 1.5,
-              scale:5,
-              mixBlendMode: "difference"
-            }}
+              mouseOptions={{
+                ...configCursor,
+              }}
             >
-            <button className='text-xl ps-8'>
-              <FaRegUser />
-            </button>
+              <button className='text-xl ps-8'>
+                <FaRegUser />
+              </button>
             </UpdateFollower>
 
           </ul>

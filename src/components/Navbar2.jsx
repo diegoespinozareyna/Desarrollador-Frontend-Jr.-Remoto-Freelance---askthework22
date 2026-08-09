@@ -8,6 +8,7 @@ import ResponsiveMenu from './ResponsiveMenu';
 import { UpdateFollower } from 'react-mouse-follower';
 import { NavbarMenu } from './Navbar';
 import { ShopContext } from '../context/ShopContext';
+import { configCursor } from '../Utils/configCursor';
 
 const Navbar2 = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -29,9 +30,7 @@ const Navbar2 = () => {
               <li key={index}>
                 <UpdateFollower
                   mouseOptions={{
-                    backgroundColor: "white",
-                    zIndex: 9999,
-                    followSpeed: 1.5,
+                    ...configCursor,
                     scale: 5,
                     mixBlendMode: "difference"
                   }}
@@ -44,9 +43,7 @@ const Navbar2 = () => {
             ))}
             <UpdateFollower
               mouseOptions={{
-                backgroundColor: "white",
-                zIndex: 9999,
-                followSpeed: 1.5,
+                ...configCursor,
                 scale: 5,
                 mixBlendMode: "difference"
               }}
@@ -58,9 +55,7 @@ const Navbar2 = () => {
             </UpdateFollower>
             <UpdateFollower
               mouseOptions={{
-                backgroundColor: "white",
-                zIndex: 9999,
-                followSpeed: 1.5,
+                ...configCursor,
                 scale: 5,
                 mixBlendMode: "difference"
               }}

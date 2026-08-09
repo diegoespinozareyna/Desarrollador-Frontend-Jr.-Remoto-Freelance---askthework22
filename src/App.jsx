@@ -10,6 +10,7 @@ import { UpdateFollower } from 'react-mouse-follower'
 import ProductList from './components/ProductList'
 import Navbar2 from './components/Navbar2'
 import SingleProduct from './components/SingleProduct'
+import { configCursor } from './Utils/configCursor'
 
 const router = createBrowserRouter([
   {
@@ -56,9 +57,7 @@ const App = () => {
       <div className='relative z-10'>
         <UpdateFollower
         mouseOptions={{
-          backgroundColor: "white",
-          zIndex: 10,
-          followSpeed: 1.5,
+          ...configCursor,
         }}
         >
        <RouterProvider router={router}/>
